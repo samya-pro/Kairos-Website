@@ -1,13 +1,8 @@
-const isProd = process.env.NODE_ENV === 'production';
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/Kairos-Website",
   output: "export",
   reactStrictMode: true,
-  swcMinify: isProd, // Minify only in production
 };
 
-module.exports = {
-  ...nextConfig,
-  basePath: isProd ? '/Kairos-Website' : '', // Adjust with your repository name
-  assetPrefix: isProd ? '/Kairos-Website/' : '', // Adjust with your repository name
-};
+module.exports = nextConfig;
