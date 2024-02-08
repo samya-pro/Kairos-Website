@@ -1,9 +1,3 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: "/Kairos-Website",
-  assetPrefix: "/Kairos-Website/",
-  output: "export",
+module.exports = {
   reactStrictMode: true,
 };
-
-module.exports = nextConfig;
