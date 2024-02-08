@@ -1,28 +1,12 @@
-/** @type {import('next').NextConfig} */
-
-const isGithubActions = process.env.GITHUB_ACTIONS || false
-
-let assetPrefix = ''
-let basePath = '/'
-
-if (isGithubActions) {
-  // trim off `<owner>/`
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
-
-  assetPrefix = `/${repo}/`
-  basePath = `/${repo}`
-}
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  assetPrefix: assetPrefix,
-  basePath: basePath,
-  output: "export",
   reactStrictMode: true,
-  swcMinify: true,
-  images: {
-    loader: 'imgix',
-    path: 'https://kairos-232096322.imgix.net',
-  },
+  swcMinify: isProd, // Minify only in production
 };
 
-module.exports = nextConfig;
+module.exports = {
+  ...nextConfig,
+  basePath: isProd ? '/Kairos-Website' : '', // Adjust with your repository name
+  assetPrefix: isProd ? '/Kairos-Website/' : '', // Adjust with your repository name
+};
