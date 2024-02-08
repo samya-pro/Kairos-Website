@@ -20,14 +20,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["localhost", "cdn.sanity.io"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
-      },
-    ],
+    loader: 'imgix',
+    path: 'https://kairos-232096322.imgix.net',
   },
 };
 
