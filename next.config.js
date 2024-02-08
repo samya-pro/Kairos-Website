@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  basePath: "/Kairos-Website",
-  output: "export",
   reactStrictMode: true,
   swcMinify: true,
   images: {

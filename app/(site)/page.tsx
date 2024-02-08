@@ -7,6 +7,7 @@ import FeaturesTab from "@/components/FeaturesTab";
 import FunFact from "@/components/FunFact";
 import Integration from "@/components/Integration";
 import CTA from "@/components/CTA";
+import Founders from "@/components/Founders";
 import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
@@ -14,8 +15,8 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-  description: "This is Home for Solid Pro",
+  title: "Kairos AI | Empowering Businesses with A.I. Solutions",
+  description: "This is Home for Kairos AI",
   // other metadata
 };
 
@@ -30,6 +31,7 @@ export default function Home() {
       <FunFact />
       <Integration />
       <CTA />
+      <Founders />
       <FAQ />
       <Testimonial />
       <Pricing />

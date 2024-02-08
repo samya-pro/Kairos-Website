@@ -8,8 +8,8 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "framer-motion";
-import SingleTestimonial from "./SingleTestimonial";
-import { testimonialData } from "./testimonialData";
+import SingleFounder from "./SingleFounder";
+import { foundersData } from "./foundersData";
 
 const Testimonial = () => {
   return (
@@ -20,9 +20,9 @@ const Testimonial = () => {
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `TESTIMONIALS`,
-                subtitle: `Clients’ Testimonials`,
-                description: `Read firsthand accounts from satisfied clients. Explore the success stories of our clients and learn how our tailored solutions have transformed their businesses.`,
+                title: `TEAM`,
+                subtitle: `Discover our Founders`,
+                description: `Explore the profiles of each of our founders to gain insight into their diverse backgrounds and expertise.`,
               }}
             />
           </div>
@@ -72,9 +72,9 @@ const Testimonial = () => {
                 },
               }}
             >
-              {testimonialData.map((review) => (
+              {foundersData.map((review) => (
                 <SwiperSlide key={review?.id}>
-                  <SingleTestimonial review={review} />
+                  <SingleFounder review={review} />
                 </SwiperSlide>
               ))}
             </Swiper>

@@ -60,11 +60,11 @@ const FAQ = () => {
                 </span>
               </h2>
 
-              <a
-                href="#"
+              <button
+                
                 className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
               >
-                <span className="duration-300 group-hover:pr-2">Know More</span>
+                <span className="duration-300 group-hover:pr-2">Ask ChatBot</span>
                 <svg
                   width="14"
                   height="14"
@@ -76,7 +76,7 @@ const FAQ = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
+              </button>
             </motion.div>
 
             <motion.div

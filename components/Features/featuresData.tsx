@@ -4,44 +4,44 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: "/images/icon/icon-01.svg",
-    title: "Crafted for SaaS",
+    title: "Customized AI Chatbots",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Deliver tailored customer interactions and streamline processes with our specialized AI chatbots, designed to enhance engagement and drive efficiency.",
   },
   {
     id: 2,
     icon: "/images/icon/icon-02.svg",
-    title: "High-quality Design",
+    title: "Automated Workflows",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Empower your business with seamless efficiency through our automated workflows, orchestrating tasks and processes to boost productivity and streamline operations.",
   },
   {
     id: 3,
     icon: "/images/icon/icon-03.svg",
-    title: "Next.js 13 + TypeScript",
+    title: "Automated Customer Support",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Enhance customer satisfaction and efficiency with our Automated Customer Support solutions, providing timely assistance and personalized interactions round-the-clock.",
   },
   {
     id: 4,
     icon: "/images/icon/icon-04.svg",
-    title: "Sanity Blog and Docs",
+    title: "Custom Platforms",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Experience tailored excellence with our Custom Platforms, empowering you with specialized tools and functionalities to fuel your business growth.",
   },
   {
     id: 5,
     icon: "/images/icon/icon-05.svg",
-    title: "DB, Auth and Stripe",
+    title: "Lead Capture & Lead Generation",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Accelerate your growth with our Lead Capture and Generation solutions, harnessing cutting-edge technology to drive targeted customer acquisition and maximize opportunities.",
   },
   {
     id: 6,
     icon: "/images/icon/icon-06.svg",
-    title: "Regular Free Updates",
+    title: "Product Recommendation",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Elevate your sales strategy with our Product Recommendation solutions, leveraging advanced algorithms to personalize customer experiences and drive conversions.",
   },
 ];
 

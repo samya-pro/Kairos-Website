@@ -180,24 +180,27 @@ const Contact = () => {
 
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Our Loaction
+                  Our Locations
                 </h3>
-                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+                <p>San Diego, California, USA</p>
+                <p>Paris, Île-de-France, France</p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Email Address
                 </h3>
                 <p>
-                  <a href="#">yourmail@domainname.com</a>
+                  <a href="#">kairosai@gmail.com</a>
                 </p>
               </div>
               <div>
                 <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
-                  Phone Number
+                  Phone Numbers
                 </h4>
                 <p>
-                  <a href="#">+009 42334 6343 843</a>
+                  <a href="">+1 (310) 460-8440</a>
+                  <br />
+                  <a href="">+33 6 49 95 12 96</a>
                 </p>
               </div>
             </motion.div>

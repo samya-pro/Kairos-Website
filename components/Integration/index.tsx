@@ -12,8 +12,8 @@ const Integration = () => {
           <SectionHeader
             headerInfo={{
               title: `INTEGRATIONS`,
-              subtitle: `Remotely Maintain Your Data, From Anywhere, Anytime.`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+              subtitle: `Automate Your Data Workflows. From Anywhere, Anytime.`,
+              description: `Effortlessly manage your data remotely, anytime, anywhere, ensuring seamless accessibility and peace of mind.`,
             }}
           />
 

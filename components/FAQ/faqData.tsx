@@ -3,18 +3,18 @@ import { FAQ } from "@/types/faq";
 const faqData: FAQ[] = [
   {
     id: 1,
-    quest: "Lorem ipsum dolor sit amet, consectetur",
-    ans: "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.",
+    quest: "How can AI chatbots enhance e-commerce product recommendations?",
+    ans: "AI chatbots leverage customer interactions and data analysis to provide personalized product recommendations, leading to increased sales and customer satisfaction.",
   },
   {
     id: 2,
-    quest: "Lorem ipsum dolor sit amet, consectetur",
-    ans: "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.",
+    quest: "What advantages do customer management systems offer?",
+    ans: "Customer management systems, centralize customer data, automate communication workflows, and enhance customer engagement and retention.",
   },
   {
     id: 3,
-    quest: "Lorem ipsum dolor sit amet, consectetur",
-    ans: "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences.",
+    quest: "What benefits do AI chatbots offer for lead capture and generation?",
+    ans: "AI chatbots streamline lead capture processes, engage with potential leads in real-time, and facilitate lead generation through targeted interactions and data-driven insights.",
   },
 ];
 
