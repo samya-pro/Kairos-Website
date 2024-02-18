@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 type HeaderInfo = {
   title: string;
   subtitle: string;
+  company?: string;
   description: string;
 };
 
 const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
-  const { title, subtitle, description } = headerInfo;
+  const { title, subtitle, company, description } = headerInfo;
 
   return (
     <>
@@ -38,6 +39,10 @@ const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
         </div>
         <h2 className="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
           {subtitle}
+          {company ? 
+            <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
+              {company}
+            </span> : null}
         </h2>
         <p className="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">{description}</p>
       </motion.div>
