@@ -16,16 +16,16 @@ const Hero = () => {
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 Kairos AI - A Complete Solution for your Business (SaaS)
+                🔥 Ukiyo Digital - A Complete Solution for your Business (SaaS)
               </h4>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
                 Elevate Your Business with {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  Kairos AI
+                  Ukiyo Digital
                 </span>
               </h1>
               <p>
-              Explore the transformative potential of Kairos AI for your business. Our tailored AI solutions, 
+              Explore the transformative potential of Ukiyo Digital for your business. Our tailored AI solutions, 
               encompassing personalized AI chatbots, streamlined automations, and optimized workflows, aim to elevate operational efficiency, 
               slash expenditures, and enrich customer interaction.
               </p>

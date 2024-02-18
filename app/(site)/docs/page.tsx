@@ -23,10 +23,15 @@ export default function DocsPage() {
 
             <div className="w-full px-4 lg:w-3/4">
               <div className="blog-details blog-details-docs shadow-three dark:bg-gray-dark rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-                <h1>Welcome to Kairos A.I.</h1>
+                <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
+                  Welcome to {"   "}
+                  <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
+                    Ukiyo Digital
+                  </span>
+                </h1>
 
                 <p className="text-body-color dark:text-body-color-dark text-base">
-                  Kairos AI stands at the forefront of innovation, dedicated to revolutionizing businesses through cutting-edge AI solutions. 
+                  Ukiyo Digital stands at the forefront of innovation, dedicated to revolutionizing businesses through cutting-edge AI solutions. 
                   Founded by a team of seasoned experts with diverse backgrounds and unwavering ambition, we are driven by a relentless pursuit 
                   of excellence and a passion for pushing boundaries. Our comprehensive suite of services encompasses AI chatbots, e-commerce product 
                   recommendations, lead capture and generation, real estate property management and recommendations, AI personal trainer buddies, custom GPTs, 
@@ -35,7 +40,7 @@ export default function DocsPage() {
                 </p>
 
                 <p>
-                  At Kairos AI, we prioritize customer success above all else. With a commitment to transparency, collaboration, and innovation, we work 
+                  At Ukiyo Digital, we prioritize customer success above all else. With a commitment to transparency, collaboration, and innovation, we work 
                   closely with our clients to understand their business objectives and deliver tailored solutions that drive tangible results. Through our 
                   streamlined processes, effective solutions, and user-friendly automation tools, we simplify complex tasks, optimize workflows, and unlock 
                   new opportunities for growth. Our dedication to excellence and a customer-centric approach sets us apart, enabling us to build lasting 

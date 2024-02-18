@@ -5,9 +5,6 @@ import { useEffect } from "react";
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    setTheme("dark");
-  }, []);
 
   return (
     <button

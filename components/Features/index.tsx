@@ -14,7 +14,12 @@ const Feature = () => {
           <SectionHeader
             headerInfo={{
               title: "OUR FEATURES",
-              subtitle: "Core Features of Kairos AI",
+              subtitle: (
+                <span>Core Features of {' '}
+                  <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
+                    Ukiyo Digital
+                  </span>
+                </span>),
               description: `Seeking relief from cumbersome workflows, soaring expenses, and underwhelming customer experiences? You're in good company. 
               Countless clients overcame comparable obstacles with our bespoke AI solutions.`,
             }}

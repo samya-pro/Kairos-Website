@@ -5,6 +5,7 @@ import FeaturesTabItem from "./FeaturesTabItem";
 import featuresTabData from "./featuresTabData";
 
 import { motion } from "framer-motion";
+import SectionHeader from "../Common/SectionHeader";
 
 const FeaturesTab = () => {
   const [currentTab, setCurrentTab] = useState("tabOne");
@@ -29,6 +30,18 @@ const FeaturesTab = () => {
             />
           </div>
 
+          <SectionHeader
+            headerInfo={{
+              title: `OUR PROCESS`,
+              subtitle: (
+                <span>Holistic Approach at
+                  <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
+                    Ukiyo Digital
+                  </span>
+                </span>),
+              description: ``,
+            }}
+          />
           {/* <!-- Tab Menues Start --> */}
           <motion.div
             variants={{

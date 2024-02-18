@@ -5,4 +5,5 @@ export type Founder = {
   image: any;
   content: string;
   designation: string;
+  website?: string;
 };

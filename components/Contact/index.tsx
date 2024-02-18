@@ -190,7 +190,7 @@ const Contact = () => {
                   Email Address
                 </h3>
                 <p>
-                  <a href="#">kairosai@gmail.com</a>
+                  <a href="#">ukiyodigital@gmail.com</a>
                 </p>
               </div>
               <div>
