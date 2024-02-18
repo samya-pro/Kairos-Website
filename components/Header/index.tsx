@@ -5,9 +5,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import ThemeToggler from "./ThemeToggler";
-import menuData from "./menuData";
+import menuDataEng from "./menuDataEng";
+import menuDataFr from "./menuDataFr";
+import LanguageToggler from "./LanguageToggler";
 
-const Header = () => {
+const Header = ({ currentLanguage, toggleLanguage }) => {
+  const menuData = currentLanguage === 'en' ? menuDataEng : menuDataFr;
+
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -154,6 +158,8 @@ const Header = () => {
           
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
+
+            <LanguageToggler currentLanguage={currentLanguage} toggleLanguage={toggleLanguage} />
             
             {/** 
             <Link
@@ -163,12 +169,21 @@ const Header = () => {
               GitHub Repo 🌟
             </Link>*/}
 
-            <Link
-              href="/support"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
-            >
-              CONTACT US
-            </Link>
+
+            {currentLanguage === 'en' ? 
+              <Link
+                href="/support"
+                className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+              >
+                CONTACT US
+              </Link> :
+          
+              <Link
+                href="/support"
+                className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+              >
+                CONTACTEZ-NOUS
+              </Link>}
           </div>
         </div>
       </div>

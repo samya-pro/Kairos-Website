@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Lines from "@/components/Lines";
@@ -11,27 +12,34 @@ const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// Create a context for managing language
+const LanguageContext = React.createContext({
+  language: "en",
+  setLanguage: (language) => {},
+});
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [language, setLanguage] = useState("en"); // Default language is English
+
+  // Function to toggle language
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "fr" : "en");
+  };
+
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`dark:bg-black ${inter.className}`}>
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="dark"
-        >
-          <Lines />
-          <Header />
-          <ToasterContext />
-          {children}
-          <Footer />
-          <ScrollToTop />
-        </ThemeProvider>
-      </body>
-    </html>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      <html lang={language} suppressHydrationWarning>
+        <body className={`dark:bg-black ${inter.className}`}>
+          <ThemeProvider enableSystem={false} attribute="class" defaultTheme="dark">
+            <Lines />
+            <Header currentLanguage={language} toggleLanguage={toggleLanguage} />
+            <ToasterContext />
+            {children}
+            <Footer />
+            <ScrollToTop />
+          </ThemeProvider>
+        </body>
+      </html>
+    </LanguageContext.Provider>
   );
 }
