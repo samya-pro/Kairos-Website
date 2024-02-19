@@ -67,26 +67,31 @@ const Contact = ({ currentLanguage }) => {
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    name="name"
                     placeholder={currentLanguage === 'en' ? `Full name` : `Nom complet`}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="email"
+                    name="email"
                     placeholder={currentLanguage === 'en' ? `E-mail address` : `Addresse e-mail`}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    required
                   />
                 </div>
 
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    name="subject"
                     placeholder={currentLanguage === 'en' ? `Subject` : `Objet`}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="text"
+                    name="phone"
                     placeholder={currentLanguage === 'en' ? `Phone number` : `Numéro de téléphone`}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
@@ -94,9 +99,11 @@ const Contact = ({ currentLanguage }) => {
 
                 <div className="mb-11.5 flex">
                   <textarea
+                    name="message"
                     placeholder={currentLanguage === 'en' ? `Message` : `Message`}
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    required
                   ></textarea>
                 </div>
 
@@ -105,7 +112,9 @@ const Contact = ({ currentLanguage }) => {
                     <input
                       id="default-checkbox"
                       type="checkbox"
+                      name="consent"
                       className="peer sr-only"
+                      required
                     />
                     <span className="border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
                       <svg
@@ -133,6 +142,8 @@ const Contact = ({ currentLanguage }) => {
                         `En cochant cette case, vous acceptez nos conditions d'utilisation du formulaire et l'utilisation de cookies dans votre navigateur.`}
                     </label>
                   </div>
+
+                  <input type="hidden" name="_redirect" value="https://digitalukiyo.com/success"></input>
 
                   <button
                     aria-label="send message"
@@ -191,18 +202,21 @@ const Contact = ({ currentLanguage }) => {
                   {currentLanguage === 'en' ? `Email Address` : `Address Email`}
                 </h3>
                 <p>
-                  <a href="">ukiyodigital@gmail.com</a>
+                  <a href="">digitalukiyocontact@gmail.com</a>
                 </p>
               </div>
               <div>
                 <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   {currentLanguage === 'en' ? `Phone Numbers` : `Numéros de téléphone`}
                 </h4>
-                <p>
-                  <a href="">+1 (310) 460-8440</a>
-                  <br />
-                  <a href="">+33 6 49 95 12 96</a>
-                </p>
+                <div className="phone-number" style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+                  <img src="/images/contact/united-states.png" alt="usa" className="phone-icon" style={{ width: '20px', height: 'auto', marginRight: '5px' }} />
+                  <span>+1 (310) 460-8440</span>
+                </div>
+                <div className="phone-number" style={{ display: 'flex', alignItems: 'center', marginBottom: '5px' }}>
+                  <img src="/images/contact/france.png" alt="france" className="phone-icon" style={{ width: '20px', height: 'auto', marginRight: '5px' }} />
+                  <span>+33 6 49 95 12 96</span>
+                </div>
               </div>
             </motion.div>
           </div>
