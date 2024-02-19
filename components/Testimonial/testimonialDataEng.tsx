@@ -5,19 +5,19 @@ import { Testimonial } from "@/types/testimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "David S.",
-    designation: "Founder @ -",
+    name: "Daniel Nataf",
+    designation: "CEO @ Le Boutiquier",
     image: image1,
     content:
-      "Coming soon.",
+      "Hichem is very reliable and has a straightforward and effective communication style. It was a pleasure working with him.",
   },
   {
     id: 2,
-    name: "Mary A.",
-    designation: "Founder @ -",
+    name: "Ilies C",
+    designation: "Engineer @ UPEC",
     image: image2,
     content:
-      "Coming soon.",
+      "Hichem is a very talented and creative person, his professionalism and vision makes him an extremely valuable individual.",
   },
   /*{
     id: 3,
