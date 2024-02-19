@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const Footer = () => {
+const Footer = ( {currentLanguage} ) => {
   return (
     <>
       <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
@@ -46,7 +46,9 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
-                  Elevate Your Business with Cutting-Edge AI Solutions and Automated Innovations. Explore More.
+                  {currentLanguage === 'en' ? 
+                    `Elevate Your Business with Cutting-Edge AI Solutions and Automated Innovations. Explore More.` : 
+                    `Élevez votre entreprise avec des solutions d'IA de pointe et des innovations automatisées. Découvrez-en plus.`}
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -80,7 +82,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Quick Links
+                    {currentLanguage === 'en' ? `Quick Links` : `Liens Utils`}
                   </h4>
 
                   <ul>
@@ -89,7 +91,7 @@ const Footer = () => {
                         href=""
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Home
+                        {currentLanguage === 'en' ? `Home` : `Accueil`}
                       </a>
                     </li>
                     <li>
@@ -97,7 +99,7 @@ const Footer = () => {
                         href="/#features"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Features
+                        {currentLanguage === 'en' ? `Services` : `Services`}
                       </a>
                     </li>
                     <li>
@@ -105,15 +107,15 @@ const Footer = () => {
                         href="/blog"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Projects
+                        {currentLanguage === 'en' ? `Projects` : `Projets`}
                       </a>
                     </li>
                     <li>
                       <a
-                        href="/#pricing"
+                        href="/support"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Pricing
+                        {currentLanguage === 'en' ? `Pricing` : `Tarification`}
                       </a>
                     </li>
                   </ul>
@@ -147,7 +149,7 @@ const Footer = () => {
                         href="/support"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Contact Us
+                        {currentLanguage === 'en' ? `Contact us` : `Contactez-nous`}
                       </a>
                     </li>
                   </ul>
@@ -172,17 +174,17 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Newsletter
+                    {currentLanguage === 'en' ? `Newsletter` : `Bulletin d'actualités`}
                   </h4>
                   <p className="mb-4 w-[90%]">
-                    Subscribe to receive future updates
+                    {currentLanguage === 'en' ? `Subscribe to receive future updates` : `Inscrivez-vous pour rester à jour`}
                   </p>
 
                   <form action="#">
                     <div className="relative">
                       <input
                         type="text"
-                        placeholder="Email address"
+                        placeholder={currentLanguage === 'en' ? `Email address` : `Addresse email`}
                         className="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
                       />
 

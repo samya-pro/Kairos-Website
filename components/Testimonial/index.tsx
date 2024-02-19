@@ -9,22 +9,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "framer-motion";
 import SingleTestimonial from "./SingleTestimonial";
-import { testimonialData } from "./testimonialData";
+import testimonialDataEng from "./testimonialDataEng";
+import testimonialDataFr from "./testimonialDataFr";
 
-const Testimonial = () => {
+const Testimonial = ( {currentLanguage} ) => {
+  const testimonialData = currentLanguage === 'en' ? testimonialDataEng : testimonialDataFr;
+
   return (
     <>
       <section>
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
-            <SectionHeader
-              headerInfo={{
+            {currentLanguage === 'en' ?
+              <SectionHeader
+                headerInfo={{
                 title: `TESTIMONIALS`,
                 subtitle: `Clients’ Testimonials`,
                 description: `Read firsthand accounts from satisfied clients. Explore the success stories of our clients and learn how our tailored solutions have transformed their businesses.`,
-              }}
-            />
+                }}
+              /> :
+              <SectionHeader
+                headerInfo={{
+                title: `Avis Clients`,
+                subtitle: `Avis de nos Clients`,
+                description: `Lisez les témoignages de clients satisfaits. Explorez les histoires à succès de nos clients et découvrez comment nos solutions sur mesure ont transformé leurs entreprises.`,
+                }}
+              />}
           </div>
           {/* <!-- Section Title End --> */}
         </div>

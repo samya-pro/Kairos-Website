@@ -3,19 +3,27 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
 
-const Integration = () => {
+const Integration = ( { currentLanguage} ) => {
   return (
     <>
       <section>
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Section Title Start --> */}
-          <SectionHeader
-            headerInfo={{
+          {currentLanguage === 'en' ? 
+            <SectionHeader
+              headerInfo={{
               title: `INTEGRATIONS`,
               subtitle: `Automate Your Data Workflows. From Anywhere, Anytime.`,
               description: `Effortlessly manage your data remotely, anytime, anywhere, ensuring seamless accessibility and peace of mind.`,
-            }}
-          />
+              }}
+            /> :
+            <SectionHeader
+              headerInfo={{
+              title: `INTEGRATIONS`,
+              subtitle: `Automatisez vos Flux de Données. De n'importe où, à tout moment.`,
+              description: `Gérez facilement vos données à distance, à tout moment, n'importe où, assurant une accessibilité sans faille et une tranquillité d'esprit.`,
+              }}
+            />}
 
           {/* <!-- Section Title End --> */}
         </div>

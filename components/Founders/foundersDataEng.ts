@@ -2,7 +2,7 @@ import image1 from "@/public/images/founders/hichem.webp";
 import image2 from "@/public/images/founders/samy.jpg";
 import { Founder } from "@/types/founder";
 
-export const foundersData: Founder[] = [
+const foundersData: Founder[] = [
   {
     id: 1,
     name: "Hisham Dahmani",
@@ -22,3 +22,5 @@ export const foundersData: Founder[] = [
       "With an unwavering ambition for success, Samy is committed to driving forward our company's vision and spearheading innovation in the industry.",
   },
 ];
+
+export default foundersData;

@@ -9,22 +9,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "framer-motion";
 import SingleFounder from "./SingleFounder";
-import { foundersData } from "./foundersData";
+import foundersDataEng from "./foundersDataEng";
+import foundersDataFr from "./foundersDataFr";
 
-const Testimonial = () => {
+const Testimonial = ( {currentLanguage} ) => {
+  const foundersData = currentLanguage === 'en' ? foundersDataEng : foundersDataFr;
+
   return (
     <>
       <section>
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
-            <SectionHeader
-              headerInfo={{
+            {currentLanguage === 'en' ?
+              <SectionHeader
+                headerInfo={{
                 title: `TEAM`,
                 subtitle: `Discover our Founders`,
                 description: `Explore the profiles of each of our founders to gain insight into their diverse backgrounds and expertise.`,
-              }}
-            />
+                }}
+              /> :
+              <SectionHeader
+                headerInfo={{
+                title: `Équipe`,
+                subtitle: `Découvrez nos Fondateurs`,
+                description: `Explorez les profils de chacun de nos fondateurs pour obtenir un aperçu de leurs parcours diversifiés et de leur expertise.`,
+                }}
+              />}
           </div>
           {/* <!-- Section Title End --> */}
         </div>
@@ -74,7 +85,7 @@ const Testimonial = () => {
             >
               {foundersData.map((review) => (
                 <SwiperSlide key={review?.id}>
-                  <SingleFounder review={review} />
+                  <SingleFounder review={review} currentLanguage={currentLanguage} />
                 </SwiperSlide>
               ))}
             </Swiper>

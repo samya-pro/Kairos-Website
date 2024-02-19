@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const FunFact = () => {
+const FunFact = ( {currentLanguage} ) => {
   return (
     <>
       {/* <!-- ===== Funfact Start ===== --> */}
@@ -56,11 +56,12 @@ const FunFact = () => {
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-              Trusted by Our Clients.
+              {currentLanguage === 'en' ? `Trusted by Our Clients.` : `Approuvés par nos clients.`}
             </h2>
             <p className="mx-auto lg:w-11/12">
-              Counted on by our valued clients for exceptional service and reliable solutions.
-              Built on a foundation of trust and excellence, our client relationships are the cornerstone of our success.
+              {currentLanguage === 'en' ? 
+                `Counted on by our valued clients for exceptional service and reliable solutions. Built on a foundation of trust and excellence, our client relationships are the cornerstone of our success.` : 
+                `Compté sur par nos clients appréciés pour un service exceptionnel et des solutions fiables. Bâti sur une base de confiance et d'excellence, nos relations avec la clientèle sont la pierre angulaire de notre succès.`}
             </p>
           </motion.div>
 
@@ -86,7 +87,7 @@ const FunFact = () => {
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
                 10+
               </h3>
-              <p className="text-lg lg:text-para2">Worldwide Clients</p>
+              <p className="text-lg lg:text-para2">{currentLanguage === 'en' ? `Worldwide Clients` : `Clients Internationaux`}</p>
             </motion.div>
             <motion.div
               variants={{
@@ -109,7 +110,7 @@ const FunFact = () => {
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
                 50+
               </h3>
-              <p className="text-lg lg:text-para2">Services Delivered</p>
+              <p className="text-lg lg:text-para2">{currentLanguage === 'en' ? `Services Delivered` : `Services Livrés`}</p>
             </motion.div>
             <motion.div
               variants={{
@@ -132,7 +133,7 @@ const FunFact = () => {
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
                 10+
               </h3>
-              <p className="text-lg lg:text-para2">Happy Clients</p>
+              <p className="text-lg lg:text-para2">{currentLanguage === 'en' ? `Happy Clients` : `Clients Satisfaits`}</p>
             </motion.div>
           </div>
         </div>

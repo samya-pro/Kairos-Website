@@ -1,7 +1,12 @@
 import { Founder } from "@/types/founder";
 import Image from "next/image";
 
-const SingleFounder = ({ review }: { review: Founder }) => {
+interface SingleFounderProps {
+  currentLanguage: string; // Define the type of currentLanguage prop
+  review: Founder;
+}
+
+const SingleFounder = ({ currentLanguage, review }: SingleFounderProps) => {
   const { name, designation, image, content, website } = review;
   return (
     <div className="rounded-lg bg-white p-9 pt-7.5 shadow-solid-9 dark:border dark:border-strokedark dark:bg-blacksection dark:shadow-none">
@@ -18,7 +23,7 @@ const SingleFounder = ({ review }: { review: Founder }) => {
               className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
             >
               <span className="duration-300 group-hover:pr-2">
-                Visit Profile
+                {currentLanguage === 'en' ? `Visit Profile` : `Visiter le Profil`}
               </span>
               <svg
                 width="14"

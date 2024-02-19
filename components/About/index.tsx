@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const About = () => {
+const About = ( {currentLanguage} ) => {
   return (
     <>
       {/* <!-- ===== About Start ===== --> */}
@@ -61,18 +61,20 @@ const About = () => {
             >
               <span className="font-medium uppercase text-black dark:text-white">
                 <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
-                  New
+                  {currentLanguage === 'en' ? `New` : `Nouveau`}
                 </span>{" "}
-                SaaS Solutions for all
+                {currentLanguage === 'en' ? `SaaS Solutions for all` : `Des solutions SaaS pour tous`}
               </span>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                A Complete Solution for
+                {currentLanguage === 'en' ? `A Complete Solution for` : `Une solution complète pour les`} {' '}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  Companies
+                  {currentLanguage === 'en' ? `Companies` : `Entreprises`}
                 </span>
               </h2>
               <p>
-                We develop and deploy your AI solutions with our streamlined process. We turn your AI visions into reality, swiftly and seamlessly.
+                {currentLanguage === 'en' ? 
+                  `We develop and deploy your AI solutions with our streamlined process. We turn your AI visions into reality, swiftly and seamlessly.` : 
+                  `Nous développons et déployons vos solutions d'IA grâce à notre processus rationalisé. Nous transformons vos visions d'IA en réalité, rapidement et sans accroc.`}
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -83,9 +85,9 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Streamlined Workflow
+                    {currentLanguage === 'en' ? `Streamlined Workflow` : `Processus Optimisé`}
                   </h3>
-                  <p>Transform ideas into automated workflows.</p>
+                  <p>{currentLanguage === 'en' ? `Transform ideas into automated workflows.` : `Transformez vos idées en processus automatisés.`}</p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -96,9 +98,9 @@ const About = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Fully Customizable
+                    {currentLanguage === 'en' ? `Fully Customizable` : `Entièrement Personnalisable`}
                   </h3>
-                  <p>Tailored solutions, fully customizable to your needs.</p>
+                  <p>{currentLanguage === 'en' ? `Tailored solutions, fully customizable to your needs.` : `Solutions sur mesure, entièrement personnalisables selon vos besoins.`}</p>
                 </div>
               </div>
             </motion.div>
@@ -130,16 +132,18 @@ const About = () => {
               className="animate_left md:w-1/2"
             >
               <h4 className="font-medium uppercase text-black dark:text-white">
-                Launch Your SaaS Fast
+                {currentLanguage === 'en' ? `Launch Your SaaS Fast` : `Lancez votre SaaS rapidement`}
               </h4>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Packed with All Essential {"   "}
+                {currentLanguage === 'en' ? `Packed with All Essential` : `Doté de toutes les intégrations`} {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Integrations
+                  {currentLanguage === 'en' ? `Integrations` : `Essentielles`}
                 </span>
               </h2>
               <p>
-                Launch your SaaS quickly, equipped with essential integrations from custom chatbots, automated sales management, client management workflows, and more.
+                {currentLanguage === 'en' ? 
+                  `Launch your SaaS quickly, equipped with essential integrations from custom chatbots, automated sales management, client management workflows, and more.` : 
+                  `Lancez rapidement votre SaaS, équipé des intégrations essentielles telles que des chatbots personnalisés, une gestion automatisée des ventes, des processus de gestion client, et bien plus encore.`}
               </p>
               <div>
                 <a
@@ -147,7 +151,7 @@ const About = () => {
                   className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
                 >
                   <span className="duration-300 group-hover:pr-2">
-                    Explore Projects
+                    {currentLanguage === 'en' ? `Explore Projects` : `Explorez nos Projets`}
                   </span>
                   <svg
                     width="14"

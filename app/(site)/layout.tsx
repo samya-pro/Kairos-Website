@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 import ToasterContext from "../context/ToastContext";
 
 // Create a context for managing language
-const LanguageContext = React.createContext({
+export const LanguageContext = React.createContext({
   language: "en",
   setLanguage: (language) => {},
 });
@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header currentLanguage={language} toggleLanguage={toggleLanguage} />
             <ToasterContext />
             {children}
-            <Footer />
+            <Footer currentLanguage={language} />
             <ScrollToTop />
           </ThemeProvider>
         </body>

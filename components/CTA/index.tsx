@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const CTA = () => {
+const CTA = ( {currentLanguage} ) => {
   return (
     <>
       {/* <!-- ===== CTA Start ===== --> */}
@@ -29,10 +29,12 @@ const CTA = () => {
               className="animate_left md:w-[70%] lg:w-1/2"
             >
               <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Contact Us Today & Increase Your Productivity
+                {currentLanguage === 'en' ? `Contact Us Today & Increase Your Productivity` : `Contactez-nous dès aujourd'hui et boostez votre productivité.`}
               </h2>
               <p>
-                Boost your productivity starting today. Take the first step towards success by booking your free consultation with us now.
+                {currentLanguage === 'en' ? 
+                  `Boost your productivity starting today. Take the first step towards success by booking your free consultation with us now.` : 
+                  `Boostez votre productivité dès aujourd'hui. Faites le premier pas vers le succès en réservant dès maintenant votre consultation gratuite avec nous.`}
               </p>
             </motion.div>
             <motion.div
@@ -65,7 +67,7 @@ const CTA = () => {
                   href="/support"
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                 >
-                  Book Consultation
+                  {currentLanguage === 'en' ? `Book Consultation` : `Réserver une consultation`}
                   <Image
                     width={20}
                     height={20}

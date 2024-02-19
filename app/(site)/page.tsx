@@ -1,3 +1,5 @@
+"use client";
+
 import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
@@ -14,28 +16,33 @@ import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 
-export const metadata: Metadata = {
-  title: "Kairos AI | Empowering Businesses with A.I. Solutions",
-  description: "This is Home for Kairos AI",
+import { useContext } from 'react';
+import { LanguageContext } from './layout';
+
+const metadata: Metadata = {
+  title: "Ukiyo Digital | Empowering Businesses with A.I. Solutions",
+  description: "This is Home for Ukiyo Digital",
   // other metadata
 };
 
 export default function Home() {
+  const { language } = useContext(LanguageContext);
+
   return (
     <main>
-      <Hero />
+      <Hero currentLanguage={language} />
       <Brands />
-      <Feature />
-      <About />
-      <FeaturesTab />
-      <FunFact />
-      <Integration />
-      <CTA />
-      <Founders />
+      <Feature currentLanguage={language} />
+      <About currentLanguage={language} />
+      <FeaturesTab currentLanguage={language} />
+      <FunFact currentLanguage={language} />
+      <Integration currentLanguage={language} />
+      <CTA currentLanguage={language} />
+      <Founders currentLanguage={language} />
       {/*<FAQ />*/}
-      <Testimonial />
+      <Testimonial currentLanguage={language} />
       {/*<Pricing />*/}
-      <Contact />
+      <Contact currentLanguage={language} />
       <br />
       {/*<Blog />*/}
     </main>

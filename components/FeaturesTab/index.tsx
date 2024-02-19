@@ -2,13 +2,16 @@
 import Image from "next/image";
 import { useState } from "react";
 import FeaturesTabItem from "./FeaturesTabItem";
-import featuresTabData from "./featuresTabData";
+import featuresTabDataEng from "./featuresTabDataEng";
+import featuresTabDataFr from "./featuresTabDataFr";
 
 import { motion } from "framer-motion";
 import SectionHeader from "../Common/SectionHeader";
 
-const FeaturesTab = () => {
+const FeaturesTab = ( {currentLanguage} ) => {
   const [currentTab, setCurrentTab] = useState("tabOne");
+
+  const featuresTabData = currentLanguage === 'en' ? featuresTabDataEng : featuresTabDataFr;
 
   return (
     <>
@@ -30,14 +33,23 @@ const FeaturesTab = () => {
             />
           </div>
 
-          <SectionHeader
-            headerInfo={{
+          {currentLanguage === 'en' ? 
+            <SectionHeader
+              headerInfo={{
               title: `OUR PROCESS`,
               subtitle: `Holistic Approach at `,
               company: `Ukiyo Digital`,
               description: ``,
-            }}
-          />
+              }}
+            /> :
+            <SectionHeader
+              headerInfo={{
+              title: `NOTRE PROCESS`,
+              subtitle: `Approche Globale chez `,
+              company: `Ukiyo Digital`,
+              description: ``,
+              }}
+            />}
           {/* <!-- Tab Menues Start --> */}
           <motion.div
             variants={{
@@ -72,7 +84,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                Discovery & Consultation
+                  {currentLanguage === 'en' ? `Discovery & Consultation` : `Découverte et Consultation`}
                 </button>
               </div>
             </div>
@@ -91,7 +103,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Essential Business Strategy
+                  {currentLanguage === 'en' ? `Essential Business Strategy` : `Stratégie Commerciale`}
                 </button>
               </div>
             </div>
@@ -110,7 +122,7 @@ const FeaturesTab = () => {
               </div>
               <div className="md:w-3/5 lg:w-auto">
                 <button className="text-sm font-medium text-black dark:text-white xl:text-regular">
-                  Fully Functional Integrations
+                  {currentLanguage === 'en' ? `Fully Functional Integrations` : `Intégrations Entièrement Fonctionnelles`}
                 </button>
               </div>
             </div>
